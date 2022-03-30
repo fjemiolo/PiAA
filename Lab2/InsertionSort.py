@@ -6,3 +6,4 @@ def InsertionSort(A):
             A[j + 1] = A[j]
             j -= 1
         A[j + 1] = key
+
