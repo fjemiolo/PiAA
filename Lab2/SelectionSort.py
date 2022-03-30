@@ -6,8 +6,3 @@ def SelectionSort(A):
                 min_index = j
         A[i], A[min_index] = A[min_index], A[i]
 
-from random import randint
-A = [randint(1,222) for _ in range (30)]
-print(A)
-SelectionSort(A)
-print(A)
