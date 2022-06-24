@@ -6,6 +6,7 @@ def QuickSort(A, low, high):
         QuickSort(A, low, pi - 1)
         QuickSort(A, pi + 1, high)
 
+
 def partition(A, low, high):
     i = (low - 1)
     pivot = A[high]
@@ -19,4 +20,9 @@ def partition(A, low, high):
     return i + 1
 
 
+arr = [13948, 51584, 51258, 17124, 43736, 61659, 47127, 61743, 98326, 33939, 83393, 13269, 48477, 14655, 94493, 45829,
+       75496]
+QuickSort(arr, 0, len(arr) - 1)
 
+for i in range(len(arr)):
+    print(arr[i], end=" ")

@@ -1,3 +1,4 @@
+'''
 def MergeSort(A, left, right):
     if left >= right:
         return
@@ -28,4 +29,40 @@ def merge(A, left, mid, right):
         A[main_cnt] = R[cnt_r]
         main_cnt += 1
         cnt_r += 1
+'''
 
+
+def mergeSort(arr):
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        L = arr[:mid]
+        R = arr[mid:]
+        mergeSort(L)
+        mergeSort(R)
+        i = j = k = 0
+        while i < len(L) and j < len(R):
+            if L[i] < R[j]:
+                arr[k] = L[i]
+                i += 1
+            else:
+                arr[k] = R[j]
+                j += 1
+            k += 1
+
+        while i < len(L):
+            arr[k] = L[i]
+            i += 1
+            k += 1
+
+        while j < len(R):
+            arr[k] = R[j]
+            j += 1
+            k += 1
+
+
+arr = [13948, 51584, 51258, 17124, 43736, 61659, 47127, 61743, 98326, 33939, 83393, 13269, 48477, 14655, 94493, 45829,
+       75496]
+mergeSort(arr)
+
+for i in range(len(arr)):
+    print(arr[i], end=" ")
